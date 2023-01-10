@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Последние вакансии</title>
-    <link rel="shortcut icon" type="image/png" href="{% static 'logo.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'php.png' %}">
 </head>
 <body>
     <header>
@@ -22,7 +22,7 @@
             </ul>
         </nav>
         <div class="content">
-            Тут будут последние вакансии
+            {{ table|safe }}
         </div>
     </div>
 
