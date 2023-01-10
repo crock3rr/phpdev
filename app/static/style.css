@@ -1,0 +1,15 @@
+header {
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 70px;
+}
+
+footer {
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 70px;
+}
+
+body {
+    text-align: center;
+}
