@@ -23,6 +23,14 @@ footer {
     height: 80px;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+}
+
 body {
     font-family: Didot, serif;
     font-size: 18px;
