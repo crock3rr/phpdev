@@ -5,7 +5,7 @@ header {
 
     border: 1px solid deepskyblue;
     border-radius: 2%;
-    background-image: url('blue-back.jpeg');
+    background-color: bisque;
     background-size: cover;
     height: 80px;
 }
@@ -18,7 +18,7 @@ footer {
 
     border: 1px solid deepskyblue;
     border-radius: 2%;
-    background-image: url('blue-back.jpeg');
+    background-color: bisque;
     background-size: cover;
     height: 80px;
 }
