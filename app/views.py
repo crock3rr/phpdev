@@ -32,7 +32,5 @@ def hh_page(request):
     df = df[df['Название вакансии'].str.lower().str.contains("php") |
             df['Название вакансии'].str.lower().str.contains("пхп") |
             df['Название вакансии'].str.lower().str.contains("рнр")].sort_values('Дата публикации вакансии')[:10]
-    data = {
-        'table': df.to_html(index=False)
-    }
-    return render(request, "hh.html", context=data)
+
+    return render(request, "hh.html", context={'table': df.to_html(index=False)})
