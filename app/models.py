@@ -11,3 +11,14 @@ class MainPage(models.Model):
     class Meta:
         verbose_name = "Вакансия"
         verbose_name_plural = "Вакансии"
+
+
+class Vacancies(models.Model):
+    date = models.CharField('Дата публикации вакансии', max_length=20)
+
+    def __str__(self):
+        return 'Дата'
+
+    class Meta:
+        verbose_name = "Дата"
+        verbose_name_plural = "Последние вакансии"

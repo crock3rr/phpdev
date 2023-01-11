@@ -32,7 +32,14 @@ th {
 body {
     font-family: Didot, serif;
     font-size: 18px;
+}
 
+h1 {
+    font-family: "Arial Black", sans-serif;
+}
+
+.content-block {
+    font-family: "Lucida Console", sans-serif;
 }
 
 .footer-text {

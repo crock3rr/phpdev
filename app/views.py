@@ -2,7 +2,7 @@ import pandas as pd
 import requests as req
 
 from django.shortcuts import render
-from app.models import MainPage
+from app.models import *
 
 
 def main_page(request):
@@ -15,7 +15,7 @@ def main_page(request):
 
 def hh_page(request):
     vacancies = []
-    date = '15.12.2022'
+    date = Vacancies.objects.get(id=1).date
     for index in range(20):
         path = f'https://api.hh.ru/vacancies?specialization=1&date_from={date}&date_to={date}&page={index}&per_page=100'
         res = req.get(path).json()
