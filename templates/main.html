@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <img style="width: auto; height: 150px" src="{% static 'head.png' %}" alt="Логотип проекта"/>
+        <img class="head-img" src="{% static 'head.png' %}" alt="Логотип проекта">
     </header>
 
     <div class="main-body">
@@ -24,11 +24,15 @@
             </ul>
         </nav>
         <div class="content">
-            <p>{{ profession.title }}</p>
-            <p>{{ profession.description }}</p>
-            <p>{{ profession.description }}</p>
-            <p>{{ profession.description }}</p>
-            <p>{{ profession.description }}</p>
+            <h1>{{ title }}</h1>
+            {% for element in description %}
+                <p>{{ element }}</p>
+            {% endfor %}
+            <div class="images">
+                <img src="{% static 'php1.jpeg' %}" alt="первая картинка на главной странице">
+                <img src="{% static 'php2.jpg' %}" alt="первая картинка на главной странице">
+                <img src="{% static 'php3.jpg' %}" alt="первая картинка на главной странице">
+            </div>
         </div>
     </div>
 

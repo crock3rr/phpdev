@@ -3,7 +3,6 @@ header {
     justify-content: center;
     align-items: center;
 
-    border: 1px solid deepskyblue;
     border-radius: 2%;
     background-color: bisque;
     background-size: cover;
@@ -16,7 +15,6 @@ footer {
     align-items: center;
     text-align: center;
 
-    border: 1px solid deepskyblue;
     border-radius: 2%;
     background-color: bisque;
     background-size: cover;
@@ -34,6 +32,7 @@ th {
 body {
     font-family: Didot, serif;
     font-size: 18px;
+
 }
 
 .footer-text {
@@ -47,8 +46,29 @@ body {
     gap: 20px;
 }
 
+.head-img {
+    width: auto;
+    height: 150px;
+}
+
+.images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.images img {
+    height: 200px;
+    width: auto;
+    border: 10px solid bisque;
+}
+
 .content {
     text-align: center;
+    margin: 20px 0;
+    width: 100%;
 }
 
 .nav-content {
