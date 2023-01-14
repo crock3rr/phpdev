@@ -1,3 +1,5 @@
+import datetime
+
 import pandas as pd
 import requests as req
 from django.db import models
@@ -41,6 +43,10 @@ class Vacancies(models.Model):
         df = df[df['Название вакансии'].str.lower().str.contains("php") |
                 df['Название вакансии'].str.lower().str.contains("пхп") |
                 df['Название вакансии'].str.lower().str.contains("рнр")].sort_values('Дата публикации вакансии')[:10]
+        df['Дата публикации вакансии'] = df['Дата публикации вакансии'].apply(
+            lambda x: f'{datetime.datetime.strptime(x, "%Y-%m-%dT%H:%M:%S+%f").day}'
+                      f'.{datetime.datetime.strptime(x, "%Y-%m-%dT%H:%M:%S+%f").month}'
+                      f'.{datetime.datetime.strptime(x, "%Y-%m-%dT%H:%M:%S+%f").year}')
         return df
 
     class Meta:
