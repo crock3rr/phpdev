@@ -55,7 +55,7 @@ class Vacancies(models.Model):
 
 class Relevance(models.Model):
     title = models.CharField('Получить информацию', max_length=50)
-    content = models.FileField(upload_to='admin')
+    content = models.FileField(upload_to='app/admin')
 
     def __str__(self):
         return self.title
