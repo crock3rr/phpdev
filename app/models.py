@@ -1,5 +1,4 @@
 import datetime
-
 import pandas as pd
 import requests as req
 from django.db import models

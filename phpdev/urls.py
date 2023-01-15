@@ -20,5 +20,6 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page),
+    path('relevance/', relevance_page),
     path('hh/', hh_page)
 ]

@@ -17,3 +17,7 @@ def hh_page(request):
     date = Vacancies.objects.get(id=1).date
     result = Vacancies.get_result_from_api(date)
     return render(request, "hh.html", context={'table': result.to_html(index=False)})
+
+
+def relevance_page(request):
+    return render(request, "relevance.html")
