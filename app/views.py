@@ -20,4 +20,10 @@ def hh_page(request):
 
 
 def relevance_page(request):
-    return render(request, "relevance.html")
+    data = {
+        'salary': pd.read_csv(Relevance.objects.get(title='Зарплаты').content).to_html(index=False),
+        'vacancy': pd.read_csv(Relevance.objects.get(title='Вакансии').content).to_html(index=False),
+        'salary_php': pd.read_csv(Relevance.objects.get(title='Зарплаты php').content).to_html(index=False),
+        'vacancy_php': pd.read_csv(Relevance.objects.get(title='Вакансии php').content).to_html(index=False)
+    }
+    return render(request, "relevance.html", context=data)

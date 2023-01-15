@@ -51,3 +51,15 @@ class Vacancies(models.Model):
     class Meta:
         verbose_name = "Дата"
         verbose_name_plural = "Последние вакансии"
+
+
+class Relevance(models.Model):
+    title = models.CharField('Получить информацию', max_length=50)
+    content = models.FileField(upload_to='admin')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Файл"
+        verbose_name_plural = "Востребованность"

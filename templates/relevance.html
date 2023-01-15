@@ -22,8 +22,26 @@
                 <li><a href="/hh">Последние вакансии</a></li>
             </ul>
         </nav>
-        <div class="content">
-            {{ table|safe }}
+        <div class="content relevance-content">
+            <div class="content-element">
+                <div>{{ salary|safe }}</div>
+                <img src="{% static 'vacancies/salary.png' %}">
+            </div>
+
+            <div class="content-element">
+                <div>{{ vacancy|safe }}</div>
+                <img src="{% static 'vacancies/vacancy.png' %}">
+            </div>
+
+            <div class="content-element">
+                <div>{{ salary_php|safe }}</div>
+                <img src="{% static 'vacancies/salary_php.png' %}">
+            </div>
+
+            <div class="content-element">
+                <div>{{ vacancy_php|safe }}</div>
+                <img src="{% static 'vacancies/vacancy_php.png' %}">
+            </div>
         </div>
     </div>
 
